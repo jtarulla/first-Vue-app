@@ -232,7 +232,7 @@ Vue.component('product-tabs', {
 					:class="{activeTab: selectedTab === tab}"
 					v-for="(tab, index) in tabs" :key="index" @click="selectedTab = tab">
 					{{ tab }}
-					</span>
+		</span>
 
 		<div v-show="selectedTab === 'Reviews'">
 			<h2>Reviews</h2>
@@ -244,12 +244,12 @@ Vue.component('product-tabs', {
 					<p> {{review.review}} </p>
 				</li>
 			</ul>
+		</div>
 
 			<product-review 
 				v-show="selectedTab === 'Make a Review'"
 			></product-review>
 
-		</div>
 
 	</div>
 	`,
